@@ -61,8 +61,11 @@ function App() {
       <p>My TodoList</p>
       
       <input className="input" ref={todoNameRef} type="text" />
+
+      <div className="todobutton">
       <button onClick={handleAddTodo}>Add Todo</button>
       <button onClick={handlerClearTodos}>Clear Complete</button>
+      </div>
       
 
       <div className="todolist">
@@ -73,12 +76,14 @@ function App() {
 
       <p>Complete List</p>
       <div className="todolist">
-      <CompleteTodoList todos={todos} CompleteTodos={CompleteTodos}/>
+      <CompleteTodoList todos={todos} CompleteTodos={CompleteTodos} />
       </div>
 
+      <div className="displays">
       <div>{todos.filter(todo => !todo.complete).length} left</div>
       <div>{todos.filter(todo => todo.complete).length} completed</div>
       <div>{todos.filter(todo => todo).length} total</div>
+      </div>
     </div>
     </>
   );

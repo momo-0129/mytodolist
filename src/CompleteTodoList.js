@@ -7,9 +7,12 @@ export default function CompleteTodoList({ todos, toggleTodo }){
       todos.filter(todo => todo.complete)
       .map(todo => {
         console.log(todo);
-        return <CompleteTodo key={todo.id} 
-                              toggleTodo={toggleTodo}
-                              todo={todo} />
+        return <CompleteTodo 
+        key={todo.id} 
+                              
+        toggleTodo={toggleTodo}
+                              
+        todo={todo} />
       })
     )
 }
